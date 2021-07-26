@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">pitch</string>
+    <string name="splash_text">Pitch It</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_splash">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="login_btn">Sign In</string>
+    <string name="login_title">Sign in Now</string>
+    <string name="register_title">Sign Up</string>
+    <string name="login_info">Please enter your information below in \n order to login to your account</string>
+    <string name="register_info">Please enter your information below to \n create your account</string>
+
+    <string name="server_client_id">1082798179554-2bve08s00qn8hjafrg1d7j1508paphbb.apps.googleusercontent.com</string>
+</resources>
