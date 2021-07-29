@@ -31,3 +31,7 @@ e
 5app/src/main/java/com/example/test/ui/MainActivity.kt,8\d\8ddfcee8e54ffc581069168e7a7993388f06369f
 g
 7app/src/main/java/com/example/test/ui/SplashActivity.kt,e\4\e438e517a7f065043cf6ec4691de3c970d221c3e
+c
+3app/src/main/java/com/example/test/utils/SPUtils.kt,2\b\2ba49484fb6468cc8efc1bc8ac42a92d7bbd028d
+e
+5app/src/main/java/com/example/test/utils/FileUtils.kt,6\3\63a88c2a3b092690dae52fffc10db2a9317443b7

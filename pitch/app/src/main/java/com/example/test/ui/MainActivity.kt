@@ -1,15 +1,10 @@
 package com.example.test.ui
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import com.example.test.databinding.ActivityMainBinding
+import com.yanzhenjie.permission.AndPermission
+import com.yanzhenjie.permission.runtime.Permission
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,5 +15,12 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        AndPermission.with(this)
+            .runtime()
+            .permission(Permission.Group.STORAGE)
+            .onGranted { permissions ->
+
+            }.onDenied { permissions -> }.start()
     }
 }

@@ -1,10 +1,15 @@
 package com.example.test.ui
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.text.InputType
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
+import android.view.View.AUTOFILL_HINT_PASSWORD
+import android.view.View.OnTouchListener
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -39,7 +44,7 @@ class LoginFragment : Fragment() {
     val RC_SIGN_IN = 9001
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
@@ -78,6 +83,7 @@ class LoginFragment : Fragment() {
                         ProfileActivity().javaClass
                     )
                 }
+                AppContext.user = users.get(0);
                 startActivity(intent);
                 activity?.finish();
             } else {
@@ -101,6 +107,35 @@ class LoginFragment : Fragment() {
             .build()
 
        mGoogleSignInClient = activity?.let { GoogleSignIn.getClient(it, gso) }
+
+        binding.etPassword.setOnTouchListener(OnTouchListener { v, event ->
+            val drawable: Drawable =
+                binding.etPassword.getCompoundDrawables().get(2) ?: return@OnTouchListener false
+            if (event.action != MotionEvent.ACTION_UP) return@OnTouchListener false
+            if (event.x > (binding.etPassword.getWidth()
+                        - binding.etPassword.getPaddingRight()
+                        - drawable.intrinsicWidth)
+            ) {
+                if(binding.etPassword.getCompoundDrawables().get(2).constantState?.equals(resources.getDrawable(R.mipmap.eye_close).constantState) == true){
+                    var left = resources.getDrawable(R.mipmap.password)
+                    left.setBounds(0, 0, left.getMinimumWidth(),left.getMinimumHeight())
+
+                    var right = resources.getDrawable(R.mipmap.eye)
+                    right.setBounds(0, 0, right.getMinimumWidth(),right.getMinimumHeight())
+                    binding.etPassword.setCompoundDrawables(left,null,right,null);
+                    binding.etPassword.inputType = 0x00000081
+                }else{
+                    var left = resources.getDrawable(R.mipmap.password)
+                    left.setBounds(0, 0, left.getMinimumWidth(),left.getMinimumHeight())
+
+                    var right = resources.getDrawable(R.mipmap.eye_close)
+                    right.setBounds(0, 0, right.getMinimumWidth(),right.getMinimumHeight())
+                    binding.etPassword.setCompoundDrawables(left,null,right,null);
+                    binding.etPassword.inputType = 0x00000001
+                }
+            }
+            false
+        })
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
