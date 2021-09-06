@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a56a56d0-132b-40f2-a38f-b47852e8c5f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pitch/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pitch/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/pitch/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/pitch/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pitch/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/app/src/main/java/com/example/test/ui/LoginFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/app/src/main/java/com/example/test/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/pitch/app/src/main/java/com/example/test/ui/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/app/src/main/java/com/example/test/ui/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/pitch/app/src/main/java/com/example/test/ui/ProfileActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/app/src/main/java/com/example/test/ui/RegisterFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/app/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pitch/app/src/main/res/layout/fragment_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/app/src/main/res/layout/fragment_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pitch/app/src/main/res/layout/fragment_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pitch/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitch/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pitch/app/src/main/res/values/colors.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1xcN0xHSJHXmQO6vwwQf0I0AW2P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a56a56d0-132b-40f2-a38f-b47852e8c5f0" name="Default Changelist" comment="" />
+      <created>1630650197681</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630650197681</updated>
+    </task>
+    <servers />
+  </component>
+</project>

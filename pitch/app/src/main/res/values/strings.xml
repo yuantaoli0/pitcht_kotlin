@@ -12,6 +12,7 @@
     <string name="title_activity_splash">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="home_title">welcome to PitchT</string>
 
     <string name="login_btn">Sign In</string>
     <string name="login_title">Sign in Now</string>
@@ -20,4 +21,7 @@
     <string name="register_info">Please enter your information below to \n create your account</string>
 
     <string name="server_client_id">1082798179554-2bve08s00qn8hjafrg1d7j1508paphbb.apps.googleusercontent.com</string>
+
+    <string name="home_top_title">Une application vous aider dans \n vote presentation en public</string>
+    <string name="home_bottom_title">Commentez et ameliorez chancun de vos enregisterements</string>
 </resources>

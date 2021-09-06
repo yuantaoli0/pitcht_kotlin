@@ -29,6 +29,10 @@
         </activity>
         <activity android:name=".ui.MainActivity" android:launchMode="singleTask" />
         <activity android:name=".ui.ProfileActivity" android:launchMode="singleTask"/>
+        <activity android:name=".ui.HomeActivity" android:launchMode="singleTask"/>
+        <activity android:name=".ui.EditActivity" android:launchMode="singleTask"/>
+        <activity android:name=".ui.ForgetActivity" android:launchMode="singleTask"/>
+        <activity android:name=".ui.ConfirmEditActivity" android:launchMode="singleTask"/>
     </application>
 
 </manifest>

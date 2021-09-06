@@ -11,41 +11,38 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.test.R
 import com.feng.kotlin.AppContext
-import com.google.android.gms.common.util.IOUtils.copyStream
-import kotlinx.android.synthetic.main.activity_profile.*
+import com.google.android.gms.common.util.IOUtils
 import kotlinx.android.synthetic.main.activity_profile.profile_icon
 import kotlinx.android.synthetic.main.activity_profile_edit.*
 import java.io.*
 
-
-class ProfileActivity : AppCompatActivity() {
+class EditActivity : AppCompatActivity() {
     private var personalImagePath:String?=null
     private var personalImageDir:String?=null
-
     private var uri: Uri?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_edit)
-
-        initData()
+        initView()
         initEvent()
     }
 
-    fun initData(){
+    fun initView(){
         tv_name.text = AppContext.user?.userName ?: "";
         tv_user_name.text = AppContext.user?.userName ?:"" ;
-        personalImagePath = "/pitch/"+AppContext.user?.userName+"/profile.jpg"
-        personalImageDir = "/pitch/"+AppContext.user?.userName
-        var file:File = File(externalCacheDir,personalImagePath);
-        var dir:File = File(externalCacheDir,personalImageDir);
+        personalImagePath = "/pitch/"+ AppContext.user?.userName+"/profile.jpg"
+        personalImageDir = "/pitch/"+ AppContext.user?.userName
+        var file: File = File(this?.externalCacheDir,personalImagePath);
+        var dir: File = File(this?.externalCacheDir,personalImageDir);
         if(file.exists()){
-            profile_icon.setImageBitmap(getLoacalBitmap(externalCacheDir?.absolutePath+File.separator+personalImagePath))
+            profile_icon.setImageBitmap(getLoacalBitmap(this?.externalCacheDir?.absolutePath+ File.separator+personalImagePath))
         }else{
             dir.mkdirs()
         }
     }
 
-    fun initEvent(){
+    fun initEvent() {
         tv_modify.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "image/*"
@@ -56,6 +53,10 @@ class ProfileActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "image/*"
             startActivityForResult(intent, 0x001)
+        }
+
+        iv_back.setOnClickListener {
+            onBackPressed()
         }
     }
 
@@ -68,27 +69,28 @@ class ProfileActivity : AppCompatActivity() {
             null
         }
     }
+
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == RESULT_OK) {
+        if (resultCode == AppCompatActivity.RESULT_OK) {
             uri = data!!.data
             //copy
-            var file:File = File(externalCacheDir,personalImagePath)
+            var file: File = File(this?.externalCacheDir,personalImagePath)
             if(!file.exists()){
                 file.createNewFile()
             }
-            uri?.let { copyFile(this, it,file) }
-            profile_icon.setImageBitmap(getLoacalBitmap(externalCacheDir?.absolutePath+File.separator+personalImagePath))
+            uri?.let { this?.let { it1 -> copyFile(it1, it,file) } }
+            profile_icon.setImageBitmap(getLoacalBitmap(this?.externalCacheDir?.absolutePath+ File.separator+personalImagePath))
         }
     }
 
-    fun  copyFile(context: Context, srcUri:Uri, dstFile:File) {
+    fun  copyFile(context: Context, srcUri: Uri, dstFile: File) {
         try {
-             val inputStream: InputStream? = context.getContentResolver().openInputStream(srcUri)
+            val inputStream: InputStream? = context.getContentResolver().openInputStream(srcUri)
             if (inputStream == null) return;
             val outputStream : OutputStream = FileOutputStream(dstFile);
-            copyStream(inputStream, outputStream);
+            IOUtils.copyStream(inputStream, outputStream);
             inputStream.close();
             outputStream.close();
         } catch (e:Exception) {
