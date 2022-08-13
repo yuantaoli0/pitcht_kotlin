@@ -1,0 +1,33 @@
+<resources>
+
+    <style name="Widget.Theme.Pitch.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.Pitch.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="roundedCornerImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- 2FA Dialogs -->
+    <style name="TwoFADialogs" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/TwoFADialogsAnimation</item>
+    </style>
+
+    <style name="TwoFADialogsAnimation">
+        <item name="android:windowEnterAnimation">@anim/translate_left_side</item>
+        <item name="android:windowExitAnimation">@anim/translate_right_side</item>
+    </style>
+
+    <declare-styleable name="VadView">
+        <attr name="waveWidth" format="dimension" />
+        <attr name="waveColor" format="color" />
+        <attr name="pointTotal" format="integer" />
+        <attr name="accuracy" format="integer"></attr>
+    </declare-styleable>
+</resources>

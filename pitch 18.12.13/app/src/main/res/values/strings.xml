@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">pitch</string>
+    <string name="splash_text">Pitch It</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_splash">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="home_title">Welcome to PitchT</string>
+
+    <string name="login_btn">LOGIN →</string>
+    <string name="home_btn">HOME →</string>
+    <string name="login_title">Login</string>
+    <string name="register_title">Create Account</string>
+    <string name="register_btn">SIGN UP →</string>
+    <string name="login_info">Please sign in to continue</string>
+    <string name="register_info">Please enter your information below to \n create your account</string>
+
+    <string name="server_client_id">1082798179554-2bve08s00qn8hjafrg1d7j1508paphbb.apps.googleusercontent.com</string>
+
+    <string name="home_top_title">Every good presentation starts with</string>
+    <string name="home_bottom_title">Commentez et ameliorez chancun de vos enregisterements</string>
+
+    <string name="modify_title">Edit Profile</string>
+    <string name="modify_username">Modify Username</string>
+    <string name="modify_email">Modify Email</string>
+    <string name="modify_password">Modify Password</string>
+    <string name="modify_2fa">Add/Remove 2fa</string>
+    <string name="modify_done">Done</string>
+    <string name="configure_username">Configure Username:</string>
+    <string name="configure_email">Configure Email:</string>
+    <string name="configure_password">Configure Password:</string>
+    
+    <string name="recommended_videoes">Recommended videos</string>
+    <string name="recommended_search">Historical results search</string>
+    <string name="back">back</string>
+    <string name="video">Video</string>
+    <string name="video_list">Video List</string>
+    <string name="Audio">Audio</string>
+    <string name="Audio_list">Audio List</string>
+    <string name="mp_title">Pitch List</string>
+    <string name="start_recorder">Click top picture to start audio recording</string>
+    <string name="stop_recorder">Click top picture to stop audio recording</string>
+
+    <string name="change_audio_name">Change Audio Name</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="dialog_ok">Ok</string>
+</resources>
